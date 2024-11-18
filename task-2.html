@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Box Layout</title>
+  <link rel="stylesheet" href="task-2.css">
+</head>
+<body>                 
+  <div class="bodyy">
+    <div class="container-vertical">
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+      <div class="box"></div>
+    </div>
+
+    <div class="container-row">
+      <div class="box-row">
+        <img src="img-1.jpg" alt="Image 1">
+      </div>
+      <div class="box-row">
+        <img src="img-2.jpg" alt="Image 2">
+      </div>
+      <div class="box-row">
+        <img src="img-3.jpg" alt="Image 3">
+      </div>
+    </div>
+
+    <div class="container-row">
+      <div class="box-large">
+        <form action="datecondition.php" method="POST" class="borrow-form" id="borrowForm">
+          <label for="student-name">Student Full Name:</label>
+          <input type="text" id="student-name" name="student-name" required>
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+    
+          <label for="student-id">Student ID (Format: 21-45555-3):</label>
+          <input type="text" id="student-id" name="student-id" pattern="\d{2}-\d{5}-\d" title="Enter a valid ID in the format XX-XXXXX-X" required>          
+    
+          <label for="book-title">Book Title:</label>
+          <select id="book-title" name="book-title" required>
+            <option value="Book1">Gavi Bittanto</option>
+            <option value="Book2">Harry Potter and the Philosopher's Stone</option>
+            <option value="Book3">Harry Potter and the Prisoner of Azkaban</option>
+            <option value="Book4">Harry Potter and the Order of the Phoenix</option>
+            <option value="Book5">Harry Potter and the Chamber of Secrets</option>
+            <option value="Book6">The Metamorphosis</option>
+            <option value="Book7">Letters to Milena</option>
+            <option value="Book8">Before the Law</option>
+            <option value="Book9">The Trial</option>
+            <option value="Book10">A Country Doctor</option>
+          </select>
+    
+          <label for="borrow-date">Borrow Date:</label>
+          <input type="date" id="borrow-date" name="borrow-date" required>
+    
+          <label for="token">Token:</label>
+          <input type="text" id="token" name="token">
+    
+          <label for="return-date">Return Date:</label>
+          <input type="date" id="return-date" name="return-date" required>
+    
+          <label for="fees">Fees:</label>
+          <input type="number" id="fees" name="fees" min="0" step="0.01" required>
+    
+          <label for="paid">Paid:</label>
+          <select id="paid" name="paid" required>
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+          </select>
+    
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="box-small">
+        <!-- New Form for Book Information -->
+        <form action="bookinfo.php" method="POST" class="book-info-form" id="bookInfoForm">
+          <label for="book-name">Book Name:</label>
+          <input type="text" id="book-name" name="book-name" required>
+      
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" required>
+      
+          <label for="isbn">ISBN:</label>
+          <input type="text" id="isbn" name="isbn" required>
+      
+          <label for="count">Count:</label>
+          <input type="number" id="count" name="count" min="1" required>
+      
+          <label for="category">Category:</label>
+          <select id="category" name="category" required>
+            <option value="Fiction">Fiction</option>
+            <option value="Non-Fiction">Non-Fiction</option>
+            <option value="Science">Science</option>
+            <option value="History">History</option>
+            <option value="Philosophy">Philosophy</option>
+            <option value="Art">Art</option>
+          </select>
+      
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+      
+    </div>
+  </div>
+</body>
+</html>
+
